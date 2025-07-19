@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi-Feature Demo</title>
+
+  <!-- External Styles & Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+  
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="style-slider.css" />
+  <link rel="stylesheet" href="style-form.css" />
+  <link rel="stylesheet" href="style-gradient.css" />
+  <link rel="stylesheet" href="style-nav.css" />
+</head>
+<body>
+  <!-- 3D Perspective Image Slider -->
+  <div id="slider" class="slider">
+    <div id="slider-content" class="slider__content">
+      <div class="slider__images">
+        <!-- Dynamically filled by script -->
+      </div>
+      <div class="slider__text">
+        <!-- Dynamically filled by script -->
+      </div>
+    </div>
+    <div class="slider__nav">
+      <div class="slider__nav-arrows">
+        <button id="left" class="slider__nav-arrow slider__nav-arrow--left">Prev</button>
+        <button id="right" class="slider__nav-arrow slider__nav-arrow--right">Next</button>
+      </div>
+      <div id="slider-dots" class="slider__nav-dots"></div>
+    </div>
+  </div>
+
+  <!-- Navigation with Submenus -->
+  <nav class="navigationWrapper">
+    <div class="logoWrapper">
+      <span class="stylish">Stylish</span><span class="logo">Logo</span>
+    </div>
+    <ul class="navigation">
+      <li class="parent"><a class="link" href="#">Home</a></li>
+      <li class="parent"><a class="link" href="#">About</a></li>
+      <li class="parent" id="clients">
+        <a class="link" href="#"><i class="fas fa-minus"></i> Clients <i class="fas fa-plus"></i></a>
+        <ul class="subnavigation">
+          <li><a class="link" href="#">Burger King</a></li>
+          <li><a class="link" href="#">Southwest Airlines</a></li>
+          <li><a class="link" href="#">Levi Strauss</a></li>
+        </ul>
+      </li>
+      <li class="parent" id="services">
+        <a class="link" href="#"><i class="fas fa-minus"></i> Services <i class="fas fa-plus"></i></a>
+        <ul class="subnavigation">
+          <li><a class="link" href="#">Print Design</a></li>
+          <li><a class="link" href="#">Web Design</a></li>
+          <li><a class="link" href="#">Mobile App Development</a></li>
+        </ul>
+      </li>
+      <li class="parent"><a class="link" href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mindful Moments Survey Form -->
+  <div class="container">
+    <header class="header text-center">
+      <h1 id="title">Mindful Moments Survey Form</h1>
+      <p id="description">Thank you for taking your time on helping us help others to live a mindful life.</p>
+    </header>
+    <form id="survey-form">
+      <!-- Name / Email / Age -->
+      <div class="form-group"><label for="name">Name</label><input type="text" id="name" class="form-control" placeholder="Enter your name" required/></div>
+      <div class="form-group"><label for="email">Email</label><input type="email" id="email" class="form-control" placeholder="Enter your Email" required/></div>
+      <div class="form-group"><label for="number">Age <span class="clue">(optional)</span></label><input type="number" id="number" class="form-control" placeholder="Enter your age" min="10" max="100"/></div>
+
+      <!-- Habits -->
+      <div class="form-group"><p>What are your favorite mindful habits?</p>
+        <label><input type="checkbox" name="prefer" value="gratitude"/> Expressing gratitude</label>
+        <label><input type="checkbox" name="prefer" value="meditate"/> Meditating</label>
+        <label><input type="checkbox" name="prefer" value="nature"/> Going on nature walks</label>
+        <label><input type="checkbox" name="prefer" value="sunset"/> Watching sunsets</label>
+        <label><input type="checkbox" name="prefer" value="flowers"/> Smelling and picking flowers</label>
+        <label><input type="checkbox" name="prefer" value="candle"/> Lighting a candle</label>
+        <label><input type="checkbox" name="prefer" value="shower"/> Showering or taking a bath</label>
+        <label><input type="checkbox" name="prefer" value="read"/> Reading</label>
+        <label><input type="checkbox" name="prefer" value="write"/> Journaling</label>
+        <label><input type="checkbox" name="prefer" value="music"/> Listening to music</label>
+      </div>
+
+      <!-- Feelings Selector -->
+      <div class="form-group"><p>How do you feel when you experience these moments?</p>
+        <select id="dropdown" class="form-control" required>
+          <option value="">Select your answer</option>
+          <option value="balance">Balance</option>
+          <option value="ground">Grounded</option>
+          <option value="connect">Connected with yourself and Earth</option>
+          <option value="powerful">Empowered</option>
+          <option value="enthusiastic">Enthusiastic</option>
+          <option value="motivated">Motivated</option>
+        </select>
+      </div>
+
+      <!-- Exercise Question -->
+      <div class="form-group"><p>Do you currently exercise?</p>
+        <label><input type="radio" name="radio" value="no" checked/> No</label>
+        <label><input type="radio" name="radio" value="yes"/> Yes</label>
+        <label><input type="radio" name="radio" value="prefer"/> Prefer not to answer</label>
+      </div>
+
+      <!-- Textareas -->
+      <div class="form-group"><p>If yes, how do you feel during and after?</p>
+        <textarea id="answers" class="input-textarea" name="answer" placeholder="Answer here..."></textarea>
+      </div>
+      <div class="form-group"><p>Any extra comments?</p>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comments here..."></textarea>
+      </div>
+
+      <div class="form-group"><button type="submit" id="submit" class="submit-button">Submit</button></div>
+    </form>
+  </div>
+
+  <!-- Gradient + Nav Animation Demo (static) -->
+  <div class="centerer">
+    <h1>Just Some More</h1><h1>Button Hover Effects</h1><h4>By: <a href="http://kylebrumm.com" target="_blank">Kyle Brumm</a></h4>
+    <div class="wrap">
+      <a class="btn-6" href="#">Position Aware<span></span></a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="script-slider.js" type="module"></script>
+  <script src="script-nav.js"></script>
+  <script src="script-buttons.js"></script>
+</body>
+</html>
