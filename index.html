@@ -19,12 +19,8 @@
   <!-- 3D Perspective Image Slider -->
   <div id="slider" class="slider">
     <div id="slider-content" class="slider__content">
-      <div class="slider__images">
-        <!-- Dynamically filled by script -->
-      </div>
-      <div class="slider__text">
-        <!-- Dynamically filled by script -->
-      </div>
+      <div class="slider__images"></div>
+      <div class="slider__text"></div>
     </div>
     <div class="slider__nav">
       <div class="slider__nav-arrows">
@@ -70,12 +66,10 @@
       <p id="description">Thank you for taking your time on helping us help others to live a mindful life.</p>
     </header>
     <form id="survey-form">
-      <!-- Name / Email / Age -->
       <div class="form-group"><label for="name">Name</label><input type="text" id="name" class="form-control" placeholder="Enter your name" required/></div>
       <div class="form-group"><label for="email">Email</label><input type="email" id="email" class="form-control" placeholder="Enter your Email" required/></div>
       <div class="form-group"><label for="number">Age <span class="clue">(optional)</span></label><input type="number" id="number" class="form-control" placeholder="Enter your age" min="10" max="100"/></div>
 
-      <!-- Habits -->
       <div class="form-group"><p>What are your favorite mindful habits?</p>
         <label><input type="checkbox" name="prefer" value="gratitude"/> Expressing gratitude</label>
         <label><input type="checkbox" name="prefer" value="meditate"/> Meditating</label>
@@ -89,7 +83,6 @@
         <label><input type="checkbox" name="prefer" value="music"/> Listening to music</label>
       </div>
 
-      <!-- Feelings Selector -->
       <div class="form-group"><p>How do you feel when you experience these moments?</p>
         <select id="dropdown" class="form-control" required>
           <option value="">Select your answer</option>
@@ -102,37 +95,14 @@
         </select>
       </div>
 
-      <!-- Exercise Question -->
       <div class="form-group"><p>Do you currently exercise?</p>
         <label><input type="radio" name="radio" value="no" checked/> No</label>
         <label><input type="radio" name="radio" value="yes"/> Yes</label>
         <label><input type="radio" name="radio" value="prefer"/> Prefer not to answer</label>
       </div>
 
-      <!-- Textareas -->
       <div class="form-group"><p>If yes, how do you feel during and after?</p>
         <textarea id="answers" class="input-textarea" name="answer" placeholder="Answer here..."></textarea>
       </div>
       <div class="form-group"><p>Any extra comments?</p>
         <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comments here..."></textarea>
-      </div>
-
-      <div class="form-group"><button type="submit" id="submit" class="submit-button">Submit</button></div>
-    </form>
-  </div>
-
-  <!-- Gradient + Nav Animation Demo (static) -->
-  <div class="centerer">
-    <h1>Just Some More</h1><h1>Button Hover Effects</h1><h4>By: <a href="http://kylebrumm.com" target="_blank">Kyle Brumm</a></h4>
-    <div class="wrap">
-      <a class="btn-6" href="#">Position Aware<span></span></a>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="script-slider.js" type="module"></script>
-  <script src="script-nav.js"></script>
-  <script src="script-buttons.js"></script>
-</body>
-</html>
